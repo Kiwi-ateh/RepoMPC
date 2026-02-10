@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+
+    //declarar variables
+
+
+
+
+
+    string myName = "Brisa";
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-     
-            Debug.Log("Hola Mundo Start");
+
+        Debug.Log("Hola " + myName);
+            ;
         
     }
 
