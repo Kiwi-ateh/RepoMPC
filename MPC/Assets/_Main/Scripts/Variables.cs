@@ -1,32 +1,42 @@
 
 using UnityEngine;
 using TMPro;
-public class Variables: MonoBehaviour
+public class Variables : MonoBehaviour
 {
 
-    //declarar variables
 
-    [SerializeField] private TMP_InputField _inputField;
-    [SerializeField] private TMP_Text _Hey;
+    //declaración variables
 
 
     public int edad = 17;
     public string myName;
+    public bool isBool;
 
 
+    [SerializeField] private TMP_InputField _inputField;
+    [SerializeField] private TMP_Text _Hey;
+    [SerializeField] private Renderer _cubo;
+    [SerializeField] private BoxCollider _boxCollider;
 
-
-    // Start is called before the first frame update
     void Start()
-    { myName= _inputField.text;
+    {
 
-        _Hey.text = "Hola ";
+        _boxCollider.isTrigger = false;
+
+        _cubo.material.color = Color.magenta;
+        myName = _inputField.text;
+
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Hola mundo");
+
+        myName = _inputField.text;
+
+        _Hey.text = "Hola " + myName;
+
     }
 }
